@@ -1,2 +1,76 @@
-<h1>Inventarios#update</h1>
-<p>Find me in app/views/inventarios/update.html.erb</p>
+<% @invetarios.each do |inventarios| %>
+
+	<form method="POST" action="/invetarios/editar/<%= invetarios.id %>" accept-charset="UTF-8" role="form" id="actualizarinventario" name="actualizarinventario" enctype="multipart/form-data">
+
+	<%= token_tag nil %>
+
+		<div class="row">
+			<div class="col-md-12">
+				<section class="panel">
+					<div class="panel-body">
+						
+
+						
+					<div class="form-group">
+						<label for="id_cliente" class="negrita">Id del Cliente: </label>
+						<div>
+							<input class="form-control" placeholder="id_cliente" name="id_cliente" type="text" id="id_cliente" onload="crearUrlAmigable(this.value);" onkeypress="crearUrlAmigable(this.value);" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="marca" class="negrita">Marca: </label>
+						<div>
+							<input class="form-control" placeholder="marca" name="marca" type="text" id="marca" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="modelo" class="negrita">Modelo: </label>
+						<div>
+							<input class="form-control" placeholder="modelo" name="modelo" type="text" id="modelo" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="cliente" class="negrita">Cliente: </label>
+						<div>
+							<input class="form-control" placeholder="cliente" name="cliente" type="text" id="cliente" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="placas" class="negrita">Placas: </label>
+						<div>
+							<input class="form-control" placeholder="placas" name="placas" type="text" id="placas" required>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="img" class="negrita">Selecciona una imagen: </label>
+						  <div>
+                                <input class="form-control" type="file" name="img" id="img" required>
+                                <br>
+                                <br> Imagen Actual:
+                                <br>
+                                <br>
+                                <img src="/assets/img/<%= inventarios.img %>" class="img-fluid" title="<%= inventarios.nombre %>" alt="<%= inventarios.nombre %>">
+ 						</div>
+					</div>
+					<div class="form-group">
+						<label for="url" class="negrita">Url: </label>
+						<div>
+							<input class="form-control" type="text" id="url" name="url" readonly>
+							<input class="form-control" type="text" id="img" name="img" readonly hidden>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-info">Guardar</button>
+					<%= link_to 'Cancelar', url_for(:back), class:"btn btn-warning" %>
+
+					  <br>
+					  <br>
+							
+					
+					</div>
+				</section>
+				
+			</div>
+		</div>
+</form>
+<% end %>

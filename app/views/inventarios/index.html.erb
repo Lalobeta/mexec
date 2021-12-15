@@ -1,2 +1,70 @@
-<h1>Inventarios#index</h1>
-<p>Find me in app/views/inventarios/index.html.erb</p>
+<!-- Mensajes -->
+<% if flash[:notice] %>
+    <div class="alert alert-success" role="alert" id="notice" class="notice">
+        <%= flash[:notice] %>                                    
+    </div>
+<% end %>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>id_cliente</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Cliente</th>
+            <th>Placas</th>
+            <th>Imagen</th>
+        </tr>
+    </thead>
+    <tbody>
+    <% @inventarios.each do |inventarios| %>
+        <tr>
+            <td class="v-align-middle">
+                <%= inventarios.id_cliente %>
+            </td>
+
+            <td class="v-align-middle">
+                <%= inventarios.marca %>
+            </td>
+
+            <td class="v-align-middle">
+                <%= inventarios.modelo %>
+            </td>
+
+            <td class="v-align-middle">
+                <%= inventarios.modelo %>
+            </td>
+
+            <td class="v-align-middle">
+                <%= inventarios.cliente %>
+            </td>
+
+            <td class="v-align-middle">
+                <%= inventarios.placas %>
+            </td>
+
+            <td class="v-align-middle">
+                 <img src="/assets/img/<%= inventarios.img %>" width="30" class="img-fluid" title="<%= inventarios.nombre %>" alt="<%= inventarios.nombre %>">
+                
+            </td>
+
+            <td class="v-align-middle">
+ 
+                    <form method="POST" action="/inventarios/delete/<%= inventarios.id %>" accept-charset="UTF-8" class="form-horizontal" role="form" onsubmit="return ConfirmDelete()">
+ 
+                        <!-- Protección CSRF -->
+                        <%= token_tag nil %> 
+ 
+                        <a href="/inventarios/read/<%= inventarios.url %>" class="btn btn-dark">Detalles</a>
+                        <a href="/inventarios/update/<%= inventarios.id %>" class="btn btn-primary">Editar</a>
+ 
+                        <button type="submit" class="btn btn-danger">Eliminar</button>
+ 
+                    </form>
+ 
+                </td>
+            </tr>
+        <%end%>
+    </tbody>
+</table>
+

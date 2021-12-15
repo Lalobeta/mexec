@@ -29,7 +29,7 @@ class InventariosController < ApplicationController
 
     @inventarios = Inventario.new(parametros)
 
-    if @inventarios.save
+  if @inventarios.save
       @postres.update_column(:img, uploaded_file.original_filename)
     else
       render :new
@@ -103,15 +103,15 @@ class InventariosController < ApplicationController
 
     #Eliminamos la imagen
 
-     simg = Inventario.where(:id => @inventarios).pluck(:img)
-      imgdelete = Rails.root.join('public','assets/img', simg.join)
-      File.delete(Rails.root + imgdelete)
+    simg = Inventario.where(:id => @inventarios).pluck(:img)
+    imgdelete = Rails.root.join('public','assets/img', simg.join)
+    File.delete(Rails.root + imgdelete)
 
-      Inventario.where(id: @inventarios).destroy_all
+    Inventario.where(id: @inventarios).destroy_all
 
-      @ini= "/inventarios/index"
-      flash[:notice]= "Eliminado Correctamente !"
-      redirect_to @ini
+    @ini= "/inventarios/index"
+    flash[:notice]= "Eliminado Correctamente !"
+    redirect_to @ini
   end
 
   private parametros

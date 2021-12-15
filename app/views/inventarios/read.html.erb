@@ -1,2 +1,41 @@
-<h1>Inventarios#read</h1>
-<p>Find me in app/views/inventarios/read.html.erb</p>
+<% @inventarios.each do  |inventarios| %>
+
+  <section class="text-center">
+  	<div class="container">
+  		<h3 class="jumbotron-heading"><%= inventarios.id_cliente%></h3>
+  	</div>
+  </section>
+
+  <div class="album py-5 bg-light">
+  	<div class="container">
+  		<div class="row">
+  			<div class="col-md-5">
+  				<img src="/assets/img <%=inventarios.img%>" class="img-fluid" title="<%= inventarios.id_cliente%>" alt="<%= inventarios.id_cliente%>">
+  			</div>
+
+  			<div class="col-md-5" align="left">
+  				<strong>Modelo: </strong>
+  				<% inventarios.modelo%>
+
+  				<br><br>
+
+  				<strong>Marca: </strong>
+  				<%= inventarios.marca %>
+
+  				<br><br>
+
+  				<strong>Cliente: </strong>
+  				<%= inventarios.cliente %>
+				<br><br>
+
+				<strong>Placas: </strong>
+  				<%= inventarios.placas %>
+				<br><br>
+
+  			</div>
+  		</div>
+  	</div>
+  	
+  </div>
+
+<%end%>

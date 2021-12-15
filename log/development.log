@@ -1,0 +1,72 @@
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE DATABASE `productos` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (24.4ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL PRIMARY KEY)[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) NOT NULL PRIMARY KEY, `value` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT GET_LOCK('4080950941535586510', 0)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateInventarios (20211212072953)
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE TABLE `inventarios` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `placas` varchar(255), `marca` varchar(255), `modelo` varchar(255), `cliente` varchar(255), `id_cliente` varchar(255), `img` varchar(255), `url` varchar(255), `created_at` datetime(6) NOT NULL, `updated_at` datetime(6) NOT NULL, `deleted_at` datetime(6))[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (3.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20211212072953')[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2021-12-14 04:13:31.736608', '2021-12-14 04:13:31.736608')[0m
+  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('4080950941535586510')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-12-14 22:10:07 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lab/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lab/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.5ms | Allocations: 528)
+Completed 200 OK in 75ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 4388)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-14 22:10:55 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/lab/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/lab/.rbenv/versions/2.6.0/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 20.4ms | Allocations: 232)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 874)
+
+
+Started GET "/create" for 127.0.0.1 at 2021-12-14 22:12:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+Started GET "/" for 127.0.0.1 at 2021-12-14 22:18:08 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+ActionController::RoutingError (uninitialized constant InventarioController
+Did you mean?  InventariosController):
+  
+Started GET "/" for 127.0.0.1 at 2021-12-14 22:18:58 -0600
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/lab/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2021-12-14 23:29:18 -0600
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/lab/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2021-12-14 23:33:30 -0600
+  
+SyntaxError (/home/lab/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+Started POST "/__web_console/repl_sessions/add7a548013424b5e4db07bee7c0961f/trace" for 127.0.0.1 at 2021-12-14 23:33:39 -0600
+Started GET "/" for 127.0.0.1 at 2021-12-14 23:36:08 -0600
+  
+SyntaxError (/home/lab/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
