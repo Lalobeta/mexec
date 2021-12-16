@@ -70,3 +70,462 @@ SyntaxError (/home/lab/Desktop/mexec/app/controllers/inventarios_controller.rb:1
 app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
 app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
 app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE DATABASE `productos` DEFAULT CHARACTER SET `utf8`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('4080950941535586510', 0)[0m
+  [1m[35m (7.2ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT RELEASE_LOCK('4080950941535586510')[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-12-15 22:52:30 -0600
+  [1m[35m (6.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/beta/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2021-12-15 22:57:54 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  
+SyntaxError (/home/beta/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2021-12-15 22:57:55 -0600
+  
+SyntaxError (/home/beta/Desktop/mexec/app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+app/controllers/inventarios_controller.rb:121: syntax error, unexpected end, expecting end-of-input
+Started GET "/" for 127.0.0.1 at 2021-12-15 23:03:01 -0600
+Processing by InventariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/index.html.erb within layouts/application
+  [1m[36mInventario Load (1.1ms)[0m  [1m[34mSELECT `inventarios`.* FROM `inventarios`[0m
+  ↳ app/views/inventarios/index.html.erb:20
+  Rendered inventarios/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 4876)
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 1.1ms | Allocations: 7617)
+
+
+  
+ActionView::Template::Error (undefined method `stylesheet_link_tag?' for #<ActionView::Base:0x007f66ac2312d8>
+Did you mean?  stylesheet_link_tag
+               stylesheet_pack_tag):
+     5:     <meta name="viewport" content="width=device-width,initial-scale=1">
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8:     <%= stylesheet_link_tag??? 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>  
+     9:     <%= stylesheet_link_tag??? 'https://cdn.datatables.net/s/dt/dt-1.10.10,r-2.0.0/datatables.min.css' %>  
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/views/layouts/application.html.erb:8
+Started GET "/" for 127.0.0.1 at 2021-12-15 23:06:24 -0600
+Processing by InventariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/index.html.erb within layouts/application
+  [1m[36mInventario Load (1.1ms)[0m  [1m[34mSELECT `inventarios`.* FROM `inventarios`[0m
+  ↳ app/views/inventarios/index.html.erb:20
+  Rendered inventarios/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1189)
+[Webpacker] Compiling...
+[Webpacker] Compilation failed:
+yarn run v1.22.15
+info Visit https://yarnpkg.com/en/docs/cli/run for documentation about this command.
+
+
+error Command "webpack" not found.
+
+  Rendered layout layouts/application.html.erb (Duration: 3318.8ms | Allocations: 22074)
+Completed 500 Internal Server Error in 3326ms (ActiveRecord: 1.1ms | Allocations: 22853)
+
+
+  
+ActionView::Template::Error (Webpacker can't find application.js in /home/beta/Desktop/mexec/public/packs/manifest.json. Possible causes:
+1. You want to set webpacker.yml value of compile to true for your environment
+   unless you are using the `webpack -w` or the webpack-dev-server.
+2. webpack has not yet re-run to reflect updates.
+3. You have misconfigured Webpacker's config/webpacker.yml file.
+4. Your webpack configuration is not creating a manifest.
+Your manifest contains:
+{
+}
+):
+     8:     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' %>  
+     9:     <%= stylesheet_link_tag 'https://cdn.datatables.net/s/dt/dt-1.10.10,r-2.0.0/datatables.min.css' %>  
+    10:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    11:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    12:   </head>
+    13: 
+    14:   <body>
+  
+app/views/layouts/application.html.erb:11
+Started GET "/" for 127.0.0.1 at 2021-12-15 23:11:37 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by InventariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/index.html.erb within layouts/application
+  [1m[36mInventario Load (3.7ms)[0m  [1m[34mSELECT `inventarios`.* FROM `inventarios`[0m
+  ↳ app/views/inventarios/index.html.erb:20
+  Rendered inventarios/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1348)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/beta/Desktop/mexec/public/packs
+[Webpacker] Hash: daaa93b095af96553f6b
+Version: webpack 4.46.0
+Time: 2837ms
+Built at: 12/15/2021 11:11:42 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-ae88efa5afd220662963.js    126 KiB  application  [emitted] [immutable]  application
+js/application-ae88efa5afd220662963.js.map    140 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-ae88efa5afd220662963.js js/application-ae88efa5afd220662963.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 1.17 KiB {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 4591.4ms | Allocations: 11200)
+Completed 200 OK in 4616ms (Views: 4594.3ms | ActiveRecord: 3.7ms | Allocations: 13883)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-15 23:12:08 -0600
+Processing by InventariosController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/index.html.erb within layouts/application
+  [1m[36mInventario Load (1.0ms)[0m  [1m[34mSELECT `inventarios`.* FROM `inventarios`[0m
+  ↳ app/views/inventarios/index.html.erb:20
+  Rendered inventarios/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 743)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 7027)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.0ms | Allocations: 7411)
+
+
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:12:24 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.5ms | Allocations: 294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 6598)
+Completed 200 OK in 36ms (Views: 15.0ms | ActiveRecord: 4.3ms | Allocations: 13049)
+
+
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:12:32 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.2ms | Allocations: 103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 6395)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 6730)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:13:45 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"Cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a167c40820 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-mv5qmc.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"", "img"=>""}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 1518)
+
+
+  
+NoMethodError (undefined method `original_filename' for "":String):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:15:27 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"Cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a167349028 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-42ylhd.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"", "img"=>""}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1577)
+
+
+  
+NoMethodError (undefined method `original_filename' for "":String):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:15:29 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.7ms | Allocations: 291)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 7068)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms | Allocations: 8009)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:16:19 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FGH1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e2de974b8 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-1srsdhd.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>""}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1000)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:24:25 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.6ms | Allocations: 351)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 7005)
+Completed 200 OK in 18ms (Views: 16.6ms | Allocations: 7859)
+
+
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:24:28 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 6382)
+Completed 200 OK in 13ms (Views: 12.7ms | Allocations: 6761)
+
+
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:29:52 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.7ms | Allocations: 369)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 6992)
+Completed 200 OK in 18ms (Views: 17.2ms | Allocations: 7843)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:30:20 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"Cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e2deecc60 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-kouhg4.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 3ms (Allocations: 997)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:35:10 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"Cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e2dd66be8 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-1t3q4vm.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 2ms (Allocations: 969)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:35:12 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.5ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 6416)
+Completed 200 OK in 31ms (Views: 17.1ms | ActiveRecord: 0.8ms | Allocations: 12526)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:35:41 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e2da6b510 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-fhivep.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 997)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:39:56 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e2cff3948 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-gpjuzv.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 970)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:39:58 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.3ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 6416)
+Completed 200 OK in 33ms (Views: 10.3ms | ActiveRecord: 9.1ms | Allocations: 12339)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:40:23 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a1681438b8 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-tr9vt1.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 997)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:41:40 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a167c3e9a8 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-19bfs57.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 596)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:44:42 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a166f55d40 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-18km8x5.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 625)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:44:45 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.4ms | Allocations: 94)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 30.7ms | Allocations: 6365)
+Completed 200 OK in 63ms (Views: 34.4ms | ActiveRecord: 8.4ms | Allocations: 14299)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:44:59 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasd", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a1673ec980 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-1kz04e2.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 625)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:45:10 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasd", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a167221880 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-1xzlycc.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdas"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1004)
+
+
+  
+NoMethodError (undefined method `original_filename' for nil:NilClass):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:45:45 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasd", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a166294f20 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-7cp4kk.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 596)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:51:19 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasd", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055a1673a6728 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-18nxe24.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 704)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/beta/Desktop/mexec/public/assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:51:53 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasd", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f1e2dfda578 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-5912-16vlcgz.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdas"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 733)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/beta/Desktop/mexec/public/assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:52:11 -0600
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasd", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055dcc31bd4b0 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-7218-36q7nh.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdas"}
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.0ms | Allocations: 1675)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/beta/Desktop/mexec/public/assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:52:13 -0600
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.8ms | Allocations: 397)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 1385.5ms | Allocations: 21890)
+Completed 200 OK in 1413ms (Views: 1390.4ms | ActiveRecord: 5.7ms | Allocations: 29829)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:52:33 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"Cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055dcc6256270 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-7218-1r1okkr.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 754)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/beta/Desktop/mexec/public/assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:54:09 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"Cbeta", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007fcc80580b48 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-7218-17zmk2l.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"cbeta"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 655)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/beta/Desktop/mexec/assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started GET "/inventarios/create" for 127.0.0.1 at 2021-12-15 23:55:45 -0600
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by InventariosController#create as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering inventarios/create.html.erb within layouts/application
+  Rendered inventarios/create.html.erb within layouts/application (Duration: 0.9ms | Allocations: 519)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 9615)
+Completed 200 OK in 34ms (Views: 11.0ms | ActiveRecord: 3.4ms | Allocations: 18247)
+
+
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:56:02 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasdx", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x000055ef7f4fc0d0 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-7393-1gb8352.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdasd"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 705)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /home/beta/Desktop/mexec/assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'
+Started POST "/inventarios/insert" for 127.0.0.1 at 2021-12-15 23:57:10 -0600
+Processing by InventariosController#insert as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id_cliente"=>"asdasdx", "marca"=>"Chevrolet", "modelo"=>"2012", "cliente"=>"Carlos Betancourt", "placas"=>"FHG1245", "nimg"=>#<ActionDispatch::Http::UploadedFile:0x00007f43dc1ebc08 @tempfile=#<Tempfile:/tmp/RackMultipart20211215-7393-csnvk1.jpeg>, @original_filename="index.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"nimg\"; filename=\"index.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "url"=>"asdasd"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 694)
+
+
+  
+Errno::ENOENT (No such file or directory @ rb_sysopen - /assets/img):
+  
+app/controllers/inventarios_controller.rb:26:in `initialize'
+app/controllers/inventarios_controller.rb:26:in `open'
+app/controllers/inventarios_controller.rb:26:in `insert'

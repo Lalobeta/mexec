@@ -12,14 +12,12 @@
 
 ActiveRecord::Schema.define(version: 2021_12_12_072953) do
 
-  create_table "inventarios", charset: "utf8", force: :cascade do |t|
+  create_table "inventarios", charset: "utf8mb3", force: :cascade do |t|
     t.string "placas"
     t.string "marca"
     t.string "modelo"
+    t.string "transmision"
     t.string "cliente"
-    t.string "id_cliente"
-    t.string "img"
-    t.string "url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.datetime "deleted_at", precision: 6

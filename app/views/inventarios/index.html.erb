@@ -1,3 +1,14 @@
+<<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+</head>
+<body>
+
+
+
 <!-- Mensajes -->
 <% if flash[:notice] %>
     <div class="alert alert-success" role="alert" id="notice" class="notice">
@@ -67,4 +78,17 @@
         <%end%>
     </tbody>
 </table>
+    <script type="text/javascript"> 
+    function ConfirmDelete() {
+        var x = confirm("Estas seguro de Eliminar?");
+        if (x)
+            return true;
+        else
+            return false;
+    }
 
+    </script>
+    
+
+</body>
+</html>

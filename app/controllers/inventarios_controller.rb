@@ -12,7 +12,7 @@ class InventariosController < ApplicationController
   end
 
   def create
-    @inventarios = Inventario.new
+   @inventarios = Inventario.new
   end
 
   def read
@@ -23,23 +23,23 @@ class InventariosController < ApplicationController
   def insert
     #Insertar nuevo archivo
     uploaded_file = params[:img]
-    File.open(Rails.root.join('public', 'assets/img', uploaded_file.original_filename), 'wb') do |file|
+    File.open(Rails.root.join('public', '/assets/img', uploaded_file.to_s), 'wb') do |file|
         file.write(uploaded_file.read)
     end
 
     @inventarios = Inventario.new(parametros)
 
-  if @inventarios.save
+    if @inventarios.save
       @postres.update_column(:img, uploaded_file.original_filename)
     else
       render :new
 
     end
 
-    #Se redirecciona a una vista principal con mensaje
-    @ini = "/inventarios/index"
-    flash[:notice]= "Creado Exitosamente"
-    redirect_to @ini
+  #Se redirecciona a una vista principal con mensaje
+  @ini = "/inventarios/index"
+  flash[:notice]= "Creado Exitosamente"
+  redirect_to @ini
 
   end
 
@@ -91,9 +91,9 @@ class InventariosController < ApplicationController
 
     end 
 
-    @ini = "/postres/index"
-    flash[:notice] = "Actualizado Correctamente !"
-    redirect_to @ini 
+      @ini = "/postres/index"
+      flash[:notice] = "Actualizado Correctamente !"
+      redirect_to @ini 
   end
 
   def delete
@@ -114,7 +114,8 @@ class InventariosController < ApplicationController
     redirect_to @ini
   end
 
-  private parametros
+  private 
+  def parametros
     params.permit(:placas, :marca, :modelo, :cliente,:id_cliente,:img)
   end
 
