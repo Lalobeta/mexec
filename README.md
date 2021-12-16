@@ -9,21 +9,14 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 2.6.0 Rails Version 6.1.4.1
 
-* System dependencies
+* System dependencies Mysql2, Yarn 1.22.15, Nodejs 
 
-* Configuration
+* Database creation: Asegurarse de que la base de datos inventarios este creada utilizando rake db:create
 
-* Database creation
+* How to run: http://127.0.0.1:3000/inventarios/create
+(Aun no funciona por completo, tiene fallas) 
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
->>>>>>> 6d1c835 (Version 1)
